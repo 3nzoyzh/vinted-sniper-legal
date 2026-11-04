@@ -1,38 +1,323 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Conditions d'utilisation - Vinted Sniper</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 20px;
-      line-height: 1.7;
-      color: #222;
-    }
-    h1, h2 { color: #6441c8; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conditions d'utilisation | Vinted Sniper</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --orange: #ff7518;
+  --orange-light: #ff9b45;
+  --bg: #0c0c0e;
+  --card: #151518;
+  --text: #f5f5f5;
+  --muted: #9999a3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -250px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 650px;
+  height: 450px;
+  background: rgba(255,117,24,0.13);
+  filter: blur(120px);
+  pointer-events: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+  border-bottom: 1px solid #26262b;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--orange);
+}
+
+.status {
+  font-size: 11px;
+  color: #ff9b45;
+  border: 1px solid #633718;
+  background: #28170d;
+  padding: 7px 12px;
+  border-radius: 30px;
+}
+
+.hero {
+  text-align: center;
+  padding: 85px 0 55px;
+}
+
+.tag {
+  display: inline-block;
+  color: var(--orange-light);
+  background: rgba(255,117,24,0.1);
+  border: 1px solid rgba(255,117,24,0.25);
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 7vw, 58px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: var(--orange);
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 600px;
+  margin: auto;
+  font-size: 15px;
+}
+
+.updated {
+  color: #777780;
+  font-size: 12px;
+  margin-top: 22px;
+}
+
+.content {
+  display: grid;
+  gap: 17px;
+  padding-bottom: 70px;
+}
+
+.card {
+  background: linear-gradient(145deg, #19191d, #121215);
+  border: 1px solid #29292e;
+  border-radius: 17px;
+  padding: 27px;
+  transition: .25s ease;
+}
+
+.card:hover {
+  border-color: rgba(255,117,24,.55);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(255,117,24,.06);
+}
+
+.card h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-size: 17px;
+  margin-bottom: 13px;
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(255,117,24,.13);
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.card p, .card li {
+  color: #aaaab3;
+  font-size: 14px;
+}
+
+.card ul {
+  padding-left: 22px;
+  margin-top: 10px;
+}
+
+.card li {
+  margin: 5px 0;
+}
+
+footer {
+  border-top: 1px solid #29292e;
+  padding: 30px 0 45px;
+  text-align: center;
+  color: #777780;
+  font-size: 12px;
+}
+
+footer strong {
+  color: var(--orange);
+}
+
+@media(max-width:600px) {
+  .hero { padding: 60px 0 40px; }
+  .card { padding: 21px; }
+  nav { padding: 20px 0; }
+}
+</style>
 </head>
+
 <body>
-  <h1>Conditions d'utilisation</h1>
-  <p>Dernière mise à jour : 4 novembre 2026</p>
 
-  <h2>1. Présentation</h2>
-  <p>Vinted Sniper est un bot Discord indépendant destiné à faciliter la recherche et le suivi d'annonces.</p>
+<div class="container">
 
-  <h2>2. Utilisation</h2>
-  <p>Les utilisateurs s'engagent à utiliser le bot légalement et à respecter les règles des plateformes utilisées.</p>
+<nav>
+  <div class="logo">VINTED <span>SNIPER.</span></div>
+  <div class="status">● CONDITIONS</div>
+</nav>
 
-  <h2>3. Disponibilité</h2>
-  <p>Le service est fourni sans garantie de disponibilité permanente.</p>
+<header class="hero">
+  <div class="tag">📜 RÈGLES DU SERVICE</div>
+  <h1>Des règles<br><span>claires et simples.</span></h1>
+  <p>
+    Retrouvez les conditions qui encadrent l'utilisation
+    du bot Discord Vinted Sniper.
+  </p>
+  <div class="updated">Dernière mise à jour : 4 novembre 2026</div>
+</header>
 
-  <h2>4. Responsabilité</h2>
-  <p>Vinted Sniper est indépendant et n'est ni affilié, ni sponsorisé, ni approuvé par Vinted.</p>
+<main class="content">
 
-  <h2>5. Contact</h2>
-  <p>Pour toute question, contactez l'administrateur du bot sur Discord.</p>
+<section class="card">
+  <h2><span class="number">01</span> Présentation du service</h2>
+  <p>
+    Vinted Sniper est un bot Discord indépendant destiné à faciliter
+    la recherche, le suivi et la détection d'annonces disponibles
+    sur des plateformes de vente en ligne.
+  </p>
+</section>
+
+<section class="card">
+  <h2><span class="number">02</span> Acceptation des conditions</h2>
+  <p>
+    En utilisant le bot, vous reconnaissez avoir pris connaissance
+    des présentes conditions et vous engagez à les respecter.
+    Si vous ne les acceptez pas, vous devez cesser d'utiliser le service.
+  </p>
+</section>
+
+<section class="card">
+  <h2><span class="number">03</span> Utilisation autorisée</h2>
+  <p>Vous vous engagez à :</p>
+  <ul>
+    <li>Utiliser le bot de manière légale et responsable.</li>
+    <li>Respecter les règles de Discord et des plateformes tierces.</li>
+    <li>Ne pas perturber le fonctionnement du service.</li>
+    <li>Ne pas détourner les fonctionnalités du bot à des fins abusives.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="number">04</span> Restrictions</h2>
+  <p>
+    Il est interdit d'utiliser le bot pour contourner des CAPTCHA,
+    des mesures de sécurité, des limitations d'accès ou toute
+    protection mise en place par des plateformes tierces.
+  </p>
+</section>
+
+<section class="card">
+  <h2><span class="number">05</span> Disponibilité du service</h2>
+  <p>
+    Vinted Sniper est fourni sans garantie de disponibilité permanente.
+    Des interruptions, opérations de maintenance et modifications
+    peuvent survenir à tout moment.
+  </p>
+</section>
+
+<section class="card">
+  <h2><span class="number">06</span> Responsabilité</h2>
+  <p>
+    Les annonces, prix et informations transmis par le bot peuvent
+    être incomplets, inexacts ou indisponibles.
+    L'utilisateur reste responsable de ses décisions d'achat
+    et de ses interactions avec les vendeurs.
+  </p>
+</section>
+
+<section class="card">
+  <h2><span class="number">07</span> Plateformes tierces</h2>
+  <p>
+    Vinted Sniper est un projet indépendant, non affilié,
+    non sponsorisé et non approuvé par Vinted ou Discord.
+    Les marques et noms cités appartiennent à leurs propriétaires respectifs.
+  </p>
+</section>
+
+<section class="card">
+  <h2><span class="number">08</span> Suspension et arrêt</h2>
+  <p>
+    L'accès au bot peut être suspendu ou interrompu en cas d'utilisation
+    abusive, de problème de sécurité ou de nécessité technique ou légale.
+  </p>
+</section>
+
+<section class="card">
+  <h2><span class="number">09</span> Modifications</h2>
+  <p>
+    Les présentes conditions peuvent être modifiées pour refléter
+    les évolutions du service. La date de dernière mise à jour
+    sera actualisée en conséquence.
+  </p>
+</section>
+
+<section class="card">
+  <h2><span class="number">10</span> Contact</h2>
+  <p>
+    Pour toute question concernant les présentes conditions,
+    contactez l'administrateur de Vinted Sniper :
+    <strong>À REMPLACER PAR TON EMAIL DE CONTACT</strong>.
+  </p>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 <strong>Vinted Sniper</strong> — Tous droits réservés.</p>
+  <p>Projet indépendant, non affilié à Vinted.</p>
+</footer>
+
+</div>
 </body>
 </html>
